@@ -30,5 +30,8 @@ int Creat_Static_List(component *L,int length,int value);
 int Length_StaticLink(StaticLink L);
 void Print_Static_Link(StaticLink L);
 int Incert_StaticList(StaticLink L, ElemType value, int position);
+void Free_SSL(StaticLink L, int position);
+Status DeletList(StaticLink L, int position);
+
 
 #endif

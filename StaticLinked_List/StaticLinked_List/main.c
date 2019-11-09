@@ -19,6 +19,12 @@ int main(void)
 	printf("The length of static linked_list is:%d\n",length);
 	printf("The Subcript is:%d\n",Subcript);
 	printf("The Static List is:\n");
-	Incert_StaticList(L,value,2);
+	Incert_StaticList(L,4,1);
+	length = Length_StaticLink(L);
+	printf("The length of static linked_list is:%d\n", length);
+	Print_Static_Link(L);
+	DeletList(L,1);
+	length = Length_StaticLink(L);
+	printf("The length of static linked_list is:%d\n", length);
 	Print_Static_Link(L);
 }

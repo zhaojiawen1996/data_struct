@@ -86,7 +86,11 @@ int Creat_Static_List(StaticLink L,int length,int value)
 		L[Subscript].data = value + i;
 	}
 	L[Subscript].cur = 0;
+	/*注意，静态链表非空时，最后一个元素的游标不一定是1，
+	当有新的数据插入到静态链表中，且插入的位置是1时，最
+	后一个元素的游标将不是1，此处因为是创建链表，所以为1。*/
 	L[MAXSIZE-1].cur = 1;
+
 	return Subscript; 
 }
 
@@ -116,6 +120,7 @@ int Creat_Static_List(component *L,int length,int value)
 * 返回值：静态链表的长度
 *****************************************************************
 */
+#if 1
 int Length_StaticLink(StaticLink L)
 {
     int Subcript;
@@ -126,6 +131,31 @@ int Length_StaticLink(StaticLink L)
 	L[0].cur = Subcript; 
 	return (Subcript - 1); 
 }
+#else
+/*
+*****************************************************************
+* 函数名：Length_StaticLink
+* 功  能：计算静态链表的长度（遍历静态链表的方法）
+* 形  参：StaticLink L：要进行操作的链表
+* 返回值：静态链表的长度
+*****************************************************************
+*/
+int Length_StaticLink(StaticLink L)
+{
+	int i,j;
+	i = L[MAXSIZE - 1].cur;/*最后一个元素存放有数值的元素的下标*/
+	j = 0;
+	while (i)
+	{
+		i = L[i].cur;
+		j++;
+	}
+	return j;
+}
+
+#endif
+
+
 
 /*
 ****************************************************************
@@ -137,6 +167,9 @@ int Length_StaticLink(StaticLink L)
 * 返回值：返回的状态
 *****************************************************************
 */
+#if 0
+/*下述代码插入元素存在错误，当链表处于刚创建好，也就是还没有插入过新元素之前，能够正确插入元素*/
+/*但是当链表中已经插入过元素，往链表中再次插入元素时，下述操作将造成错误*/
 int Incert_StaticList(StaticLink L,ElemType value,int position)
 {
     int i;
@@ -155,6 +188,84 @@ int Incert_StaticList(StaticLink L,ElemType value,int position)
 	L[0].cur = i+2;
 	return OK;
 }
+#elif 0 
+/*下述代码存在错误，不能实现将新元素插入到第一个元素的功能*/
+int Incert_StaticList(StaticLink L, ElemType value, int position)
+{
+	int i,j,k;
+	k = MALLOC_SLL(L);
+	j = L[MAXSIZE - 1].cur;
+	if (position < 1 || position > k)
+	{
+		return ERROR;
+	}
+	for (i = 1;i < position-1;i++)
+	{
+		j = L[j].cur;/*循环结束，j便是插入元素的上一个元素的游标*/
+	}
+	L[k].data = value;
+	L[k].cur = L[j].cur;
+	L[j].cur = k;
+	L[0].cur = k + 1;
+}
+
+#else
+int Incert_StaticList(StaticLink L, ElemType value, int position)
+{
+	int i, j, k;
+	j = MAXSIZE - 1;
+	k = MALLOC_SLL(L);
+	for (i = 1;i < position;i++)
+	{
+		j = L[j].cur;/*当循环结束时，此时的j是要插入元素的上一个元素的游标，也就是要插入位置的下标*/
+	}
+	L[k].data = value;
+	L[k].cur = L[j].cur;
+	L[j].cur = k;
+	//L[0].cur = k + 1;/*在获取空闲分量下标的同时，已经将首个元素的游标值更新*/
+	return OK;
+}
+
+#endif 
+
+/*
+******************************************************
+* 函数名：Free_SSL
+* 功  能：重新赋值当前位置的游标
+* 形  参：StaticLink L：要进行操作的链表
+int position：要进行释放的位置
+* 返回值：空
+*****************************************************
+*/
+void Free_SSL(StaticLink L, int position)
+{
+	L[position].cur = L[0].cur;
+	L[0].cur = position;
+}
+
+/*
+*******************************************************
+* 函数名：DeletList
+* 功  能：删除元素
+* 形  参：StaticLink L：要进行操作的链表
+          int position：要进行删除元素的位置
+* 返回值：操作的状态
+*******************************************************
+*/
+Status DeletList(StaticLink L, int position)
+{
+	int i,j,k;
+	k = MAXSIZE - 1;
+	for (i = 1;i < position;i++)
+	{
+		k = L[k].cur;/*此时的k是要删除的元素的上一个元素的游标，也就是要删除元素的下标*/
+	}
+	j = L[k].cur;/*j是要删除元素位置的游标*/
+	L[k].cur = L[j].cur;/*将要删除元素位置的前一个的游标指向要删除元素位置的下一个*/
+	Free_SSL(L,j);
+	return OK;
+}
+
 
 /*
 *******************************************************************
@@ -164,10 +275,23 @@ int Incert_StaticList(StaticLink L,ElemType value,int position)
 * 返回值：无
 *******************************************************************
 */
-#if 1
+#if 0
+/*下述代码存在错误，当第一个元素下标不是1时，不能输出第一个元素*/
 void Print_Static_Link(StaticLink L)
 {
     int i = 1;
+	while (i)
+	{
+		printf("%d\n", L[i].data);
+		i = L[i].cur;
+	}
+}
+
+#else
+void Print_Static_Link(StaticLink L)
+{
+	int i = MAXSIZE - 1;
+	i = L[i].cur;
 	while (i)
 	{
 		printf("%d\n", L[i].data);
