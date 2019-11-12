@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Creat_List_Tail	Double_List/Double_Linked_List.c	/^Status Creat_List_Tail(DuLinked_List *L,int length,int value)$/;"	f
+DuLinked_List	Double_List/Double_Linked_List.h	/^typedef struct Node *DuLinked_List;$/;"	t	typeref:struct:Node
+ERROR	Double_List/Double_Linked_List.h	8;"	d
+ElemType	Double_List/Double_Linked_List.h	/^typedef  int           ElemType;$/;"	t
+Init_List	Double_List/Double_Linked_List.c	/^Status Init_List(DuLinked_List *L)$/;"	f
+L	Double_List/main.c	/^DuLinked_List L;$/;"	v
+Node	Double_List/Double_Linked_List.h	/^typedef struct Node$/;"	s
+Node	Double_List/Double_Linked_List.h	/^}Node;$/;"	t	typeref:struct:Node
+OK	Double_List/Double_Linked_List.h	7;"	d
+Show_List	Double_List/Double_Linked_List.c	/^Status Show_List(DuLinked_List L)$/;"	f
+Status	Double_List/Double_Linked_List.h	/^typedef  unsigned char Status;$/;"	t
+__DOUBLE_LINKED_LIST_H__	Double_List/Double_Linked_List.h	2;"	d
+data	Double_List/Double_Linked_List.h	/^	ElemType data;$/;"	m	struct:Node
+main	Double_List/main.c	/^int main(void)$/;"	f
+next	Double_List/Double_Linked_List.h	/^	struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node
+prior	Double_List/Double_Linked_List.h	/^	struct Node *prior;$/;"	m	struct:Node	typeref:struct:Node::Node
