@@ -20,5 +20,9 @@ int main(void)
 	Show_List(L);
 	length = Length_List(L);
 	printf("The Length of the List is:\n");
-	printf("%d\nX",length);
+	printf("%d\n",length);
+#if 0
+	Clear_List(&L);
+	Show_List(L);
+#endif
 }

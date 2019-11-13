@@ -23,6 +23,7 @@ Status Creat_List_Head(DuLinked_List *L,int length,int value);
 Status Incert_List(DuLinked_List *L,int position,int value);
 Status Delet_List(DuLinked_List *L,int position,int *value);
 int Length_List(DuLinked_List L);
+Status Clear_List(DuLinked_List *L);
 
 
 

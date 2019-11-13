@@ -170,6 +170,23 @@ int Length_List(DuLinked_List L)
 	return length;
 }
 
+/*This function has some problems*/
+Status Clear_List(DuLinked_List *L)
+{
+    DuLinked_List P,Q;
+	//P = (DuLinked_List)malloc(sizeof(Node));
+	//Q = (DuLinked_List)malloc(sizeof(Node));
+	P = (*L)->next;
+	while(P)
+	{
+		Q = P->next;
+		free(P);
+		P = Q;
+	}
+	(*L)->next = *L;
+	return OK;
+}
+
 /*
 *******************************************************
 * º¯ÊýÃû£ºShow_List
