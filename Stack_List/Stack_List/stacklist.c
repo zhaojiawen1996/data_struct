@@ -109,7 +109,7 @@ Status Share_Stack_Init(ShStack *S)
 * 功  能：往共享栈中压入数据
 * 形  参：ShStack *S：      要压入数据的共享栈
           SElemType value： 要压入的数据
-		  int Stack_Num:    共享栈中栈的编号
+		      int Stack_Num:    共享栈中栈的编号
 * 返回值：操作的状态
 ****************************************************
 */

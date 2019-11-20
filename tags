@@ -6,8 +6,10 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ClearList	Liner_List/Liner_List/sqlist.c	/^Status ClearList(Sqlist *L)$/;"	f
 ClearList	Link_List/Link_List/link_list.c	/^Status ClearList(Linklist *L)$/;"	f
+Clear_List	Double_List/Double_List/Double_Linked_List.c	/^Status Clear_List(DuLinked_List *L)$/;"	f
 Creat_Circular_list_Tail	Circular_linked_list/Circular_linked_list/circular_linked_list.c	/^Status Creat_Circular_list_Tail(LinkedList *L,int length)$/;"	f
 Creat_Circular_list_head	Circular_linked_list/Circular_linked_list/circular_linked_list.c	/^Status Creat_Circular_list_head(LinkedList *L,int length)$/;"	f
+Creat_List_Head	Double_List/Double_List/Double_Linked_List.c	/^Status Creat_List_Head(DuLinked_List *L,int length,int value)$/;"	f
 Creat_List_Head	Link_List/Link_List/link_list.c	/^Status Creat_List_Head(Linklist *L,int n)$/;"	f
 Creat_List_Head	Link_List/Link_List/link_list.c	/^Status Creat_List_Head(Node *L,int n)$/;"	f
 Creat_List_Tail	Double_List/Double_List/Double_Linked_List.c	/^Status Creat_List_Tail(DuLinked_List *L,int length,int value)$/;"	f
@@ -16,11 +18,13 @@ Creat_Static_List	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^int
 Creat_Static_List	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^int Creat_Static_List(component *L,int length,int value)$/;"	f
 DeletList	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^Status DeletList(StaticLink L, int position)$/;"	f
 Delet_Elem	Liner_List/Liner_List/sqlist.c	/^Status Delet_Elem(Sqlist *L,int position,ElemType *value)$/;"	f
+Delet_List	Double_List/Double_List/Double_Linked_List.c	/^Status Delet_List(DuLinked_List *L,int position,int *value)$/;"	f
 DuLinked_List	Double_List/Double_List/Double_Linked_List.h	/^typedef struct Node *DuLinked_List;$/;"	t	typeref:struct:Node
 ERROR	Circular_linked_list/Circular_linked_list/circular_linked_list.h	5;"	d
 ERROR	Double_List/Double_List/Double_Linked_List.h	8;"	d
 ERROR	Liner_List/Liner_List/sqlist.h	6;"	d
 ERROR	Link_List/Link_List/link_list.h	7;"	d
+ERROR	Stack_List/Stack_List/stacklist.h	11;"	d
 ERROR	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	10;"	d
 ElemType	Circular_linked_list/Circular_linked_list/circular_linked_list.h	/^typedef int ElemType;$/;"	t
 ElemType	Double_List/Double_List/Double_Linked_List.h	/^typedef  int           ElemType;$/;"	t
@@ -33,6 +37,7 @@ Free_SSL	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^void Free_SS
 GetElem	Liner_List/Liner_List/sqlist.c	/^Status GetElem(Sqlist L,int position,ElemType *value)$/;"	f
 GetElem	Link_List/Link_List/link_list.c	/^Status GetElem(Linklist L,int position,ElemType *value)$/;"	f
 Incert_Elem	Liner_List/Liner_List/sqlist.c	/^Status Incert_Elem(Sqlist *L,int position,ElemType value)$/;"	f
+Incert_List	Double_List/Double_List/Double_Linked_List.c	/^Status Incert_List(DuLinked_List *L,int position,int value)$/;"	f
 Incert_StaticList	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^int Incert_StaticList(StaticLink L, ElemType value, int position)$/;"	f
 InitLink	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^Status	InitLink(StaticLink L)$/;"	f
 Init_List	Double_List/Double_List/Double_Linked_List.c	/^Status Init_List(DuLinked_List *L)$/;"	f
@@ -41,6 +46,7 @@ L	Double_List/Double_List/main.c	/^DuLinked_List L;$/;"	v
 L	Liner_List/Liner_List/main.c	/^Sqlist L,L2;$/;"	v
 L	StaticLinked_List/StaticLinked_List/main.c	/^StaticLink L;$/;"	v
 L2	Liner_List/Liner_List/main.c	/^Sqlist L,L2;$/;"	v
+Length_List	Double_List/Double_List/Double_Linked_List.c	/^int Length_List(DuLinked_List L)$/;"	f
 Length_StaticLink	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^int Length_StaticLink(StaticLink L)$/;"	f
 Link	Link_List/Link_List/link_list.h	/^typedef struct Node Link;$/;"	t	typeref:struct:Node
 LinkedList	Circular_linked_list/Circular_linked_list/circular_linked_list.h	/^typedef struct Node *LinkedList;$/;"	t	typeref:struct:Node
@@ -52,6 +58,7 @@ List_Init	Liner_List/Liner_List/sqlist.c	/^Status List_Init(Sqlist *L,int size)$
 LocateElem	Liner_List/Liner_List/sqlist.c	/^Status LocateElem(Sqlist L,ElemType value)$/;"	f
 MALLOC_SLL	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^int MALLOC_SLL(StaticLink L)$/;"	f
 MALLOC_SLL	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^int MALLOC_SLL(component *L)$/;"	f
+MAXSIZE	Stack_List/Stack_List/stacklist.h	8;"	d
 MAXSIZE	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	12;"	d
 Maxsize	Liner_List/Liner_List/sqlist.h	4;"	d
 Node	Circular_linked_list/Circular_linked_list/circular_linked_list.h	/^typedef struct Node$/;"	s
@@ -64,18 +71,33 @@ OK	Circular_linked_list/Circular_linked_list/circular_linked_list.h	4;"	d
 OK	Double_List/Double_List/Double_Linked_List.h	7;"	d
 OK	Liner_List/Liner_List/sqlist.h	7;"	d
 OK	Link_List/Link_List/link_list.h	8;"	d
+OK	Stack_List/Stack_List/stacklist.h	10;"	d
 OK	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	9;"	d
 Print_Static_Link	StaticLinked_List/StaticLinked_List/Static_Linked_List.c	/^void Print_Static_Link(StaticLink L)$/;"	f
+S	Stack_List/Stack_List/main.c	/^SqStack S;$/;"	v
+SElemType	Stack_List/Stack_List/stacklist.h	/^typedef int             SElemType;\/*类型不固定*\/$/;"	t
+S_Stack	Stack_List/Stack_List/main.c	/^ShStack S_Stack;$/;"	v
+ShStack	Stack_List/Stack_List/stacklist.h	/^}ShStack;$/;"	t	typeref:struct:__anon3
+Share_Stack_Init	Stack_List/Stack_List/stacklist.c	/^Status Share_Stack_Init(ShStack *S)$/;"	f
+Share_Stack_Pop	Stack_List/Stack_List/stacklist.c	/^Status Share_Stack_Pop(ShStack *S,SElemType *value,int stack_num)$/;"	f
+Share_Stack_Push	Stack_List/Stack_List/stacklist.c	/^Status Share_Stack_Push(ShStack *S,SElemType value,int Stack_Num)$/;"	f
 Show_List	Circular_linked_list/Circular_linked_list/circular_linked_list.c	/^Status Show_List(LinkedList L)$/;"	f
 Show_List	Double_List/Double_List/Double_Linked_List.c	/^Status Show_List(DuLinked_List L)$/;"	f
 Show_List	Link_List/Link_List/link_list.c	/^void Show_List(Linklist *L)$/;"	f
 Show_List	Link_List/Link_List/link_list.c	/^void Show_List(Node *L)$/;"	f
+Show_List	Stack_List/Stack_List/stacklist.c	/^void Show_List(SqStack S)$/;"	f
+Show_ShList	Stack_List/Stack_List/stacklist.c	/^void Show_ShList(ShStack S)$/;"	f
+SqStack	Stack_List/Stack_List/stacklist.h	/^}SqStack;$/;"	t	typeref:struct:__anon2
+SqStack_Init	Stack_List/Stack_List/stacklist.c	/^Status SqStack_Init(SqStack *S)$/;"	f
+SqStack_Pop	Stack_List/Stack_List/stacklist.c	/^Status SqStack_Pop(SqStack *S,int *value)$/;"	f
+SqStack_Push	Stack_List/Stack_List/stacklist.c	/^Status SqStack_Push(SqStack *S,int value)$/;"	f
 Sqlist	Liner_List/Liner_List/sqlist.h	/^}Sqlist;$/;"	t	typeref:struct:__anon1
-StaticLink	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^}component,StaticLink[MAXSIZE];$/;"	t	typeref:struct:__anon2
+StaticLink	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^}component,StaticLink[MAXSIZE];$/;"	t	typeref:struct:__anon4
 Status	Circular_linked_list/Circular_linked_list/circular_linked_list.h	/^typedef unsigned char Status;$/;"	t
 Status	Double_List/Double_List/Double_Linked_List.h	/^typedef  unsigned char Status;$/;"	t
 Status	Liner_List/Liner_List/sqlist.h	/^typedef unsigned char Status;$/;"	t
 Status	Link_List/Link_List/link_list.h	/^typedef unsigned char Status;$/;"	t
+Status	Stack_List/Stack_List/stacklist.h	/^typedef unsigned char   Status;$/;"	t
 Status	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^typedef unsigned char Status;$/;"	t
 TRUE	Liner_List/Liner_List/sqlist.h	9;"	d
 TRUE	Link_List/Link_List/link_list.h	10;"	d
@@ -83,21 +105,28 @@ __CIRCULAR_LINKED_LIST__	Circular_linked_list/Circular_linked_list/circular_link
 __DOUBLE_LINKED_LIST_H__	Double_List/Double_List/Double_Linked_List.h	2;"	d
 __LINK_LIST_H__	Link_List/Link_List/link_list.h	2;"	d
 __SQLIST_H__	Liner_List/Liner_List/sqlist.h	2;"	d
+__STACKLIST_H__	Stack_List/Stack_List/stacklist.h	2;"	d
 __STATIC_LINKED_LIST_H__	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	2;"	d
-component	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^}component,StaticLink[MAXSIZE];$/;"	t	typeref:struct:__anon2
-cur	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^	int cur;\/*数组的游标*\/$/;"	m	struct:__anon2
+component	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^}component,StaticLink[MAXSIZE];$/;"	t	typeref:struct:__anon4
+cur	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^	int cur;\/*数组的游标*\/$/;"	m	struct:__anon4
 data	Circular_linked_list/Circular_linked_list/circular_linked_list.h	/^    ElemType data;$/;"	m	struct:Node
 data	Double_List/Double_List/Double_Linked_List.h	/^	ElemType data;$/;"	m	struct:Node
 data	Liner_List/Liner_List/sqlist.h	/^  ElemType data[Maxsize];$/;"	m	struct:__anon1
 data	Link_List/Link_List/link_list.h	/^    ElemType data;$/;"	m	struct:Node
-data	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^    ElemType data;$/;"	m	struct:__anon2
+data	Stack_List/Stack_List/stacklist.h	/^	SElemType data[MAXSIZE];$/;"	m	struct:__anon2
+data	Stack_List/Stack_List/stacklist.h	/^    SElemType data[MAXSIZE];$/;"	m	struct:__anon3
+data	StaticLinked_List/StaticLinked_List/Static_Linked_List.h	/^    ElemType data;$/;"	m	struct:__anon4
 length	Liner_List/Liner_List/sqlist.h	/^  int length;$/;"	m	struct:__anon1
 main	Circular_linked_list/Circular_linked_list/main.c	/^int main(void)$/;"	f
 main	Double_List/Double_List/main.c	/^int main(void)$/;"	f
 main	Liner_List/Liner_List/main.c	/^int main(void)$/;"	f
 main	Link_List/Link_List/main.c	/^int main(void)$/;"	f
+main	Stack_List/Stack_List/main.c	/^int main(void)$/;"	f
 main	StaticLinked_List/StaticLinked_List/main.c	/^int main(void)$/;"	f
 next	Circular_linked_list/Circular_linked_list/circular_linked_list.h	/^	struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node
 next	Double_List/Double_List/Double_Linked_List.h	/^	struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node
 next	Link_List/Link_List/link_list.h	/^	struct Node *next;$/;"	m	struct:Node	typeref:struct:Node::Node
 prior	Double_List/Double_List/Double_Linked_List.h	/^	struct Node *prior;$/;"	m	struct:Node	typeref:struct:Node::Node
+top	Stack_List/Stack_List/stacklist.h	/^	int top;\/*用于栈顶指针*\/$/;"	m	struct:__anon2
+top1	Stack_List/Stack_List/stacklist.h	/^	int top1;\/*用于栈1的栈顶指针*\/$/;"	m	struct:__anon3
+top2	Stack_List/Stack_List/stacklist.h	/^	int top2;\/*用于栈2的栈顶指针*\/$/;"	m	struct:__anon3

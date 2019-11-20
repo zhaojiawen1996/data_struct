@@ -99,7 +99,7 @@ Status Creat_List_Tail(Linklist *L, int n)
 {
 	Linklist r, p;
 	int i;
-	(*L) = (Linklist)malloc(sizeof(Node));
+	(*L) = (Linklist)malloc(sizeof(Node));/*创建头结点，使得第一个元素的插入和其他位置元素的插入方法一致*/
 	r = (*L);
 	for (i = 0;i < n;i++)
 	{
