@@ -20,7 +20,7 @@ typedef struct
 
 typedef struct
 {
-    SElemType data[MAXSIZE];
+  SElemType data[MAXSIZE];
 	int top1;/*用于栈1的栈顶指针*/
 	int top2;/*用于栈2的栈顶指针*/
 }ShStack;
