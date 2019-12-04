@@ -38,7 +38,7 @@ Status Creat_Circular_list_head(LinkedList *L,int length)
 */
 Status Creat_Circular_list_Tail(LinkedList *L,int length)
 {
-    int i;
+  int i;
 	LinkedList P,R;
 	(*L) = (LinkedList)malloc(sizeof(Node));
 	R = (*L);
@@ -47,7 +47,7 @@ Status Creat_Circular_list_Tail(LinkedList *L,int length)
 	    P = (LinkedList)malloc(sizeof(Node));
 	  	P->data = i;
 	    R->next = P;
-		R = P;
+		  R = P;
 	}
 	P->next = *L;
 	return OK;
