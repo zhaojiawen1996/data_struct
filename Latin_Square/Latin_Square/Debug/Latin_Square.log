@@ -1,0 +1,18 @@
+﻿生成启动时间为 2019/12/4 19:41:57。
+     1>项目“E:\Github\The_recording_of_studying_data_struct(github)\Latin_Square\Latin_Square\Latin_Square.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt latin.c
+         latin.c
+     1>e:\github\the_recording_of_studying_data_struct(github)\latin_square\latin_square\latin.c(12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : 参见“scanf”的声明
+     1>e:\github\the_recording_of_studying_data_struct(github)\latin_square\latin_square\latin.c(38): warning C4101: “Q”: 未引用的局部变量
+     1>e:\github\the_recording_of_studying_data_struct(github)\latin_square\latin_square\latin.c(52): warning C4716: “Print_Square”: 必须返回一个值
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Github\The_recording_of_studying_data_struct(github)\Latin_Square\Debug\Latin_Square.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Github\The_recording_of_studying_data_struct(github)\Latin_Square\Debug\Latin_Square.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Github\The_recording_of_studying_data_struct(github)\Latin_Square\Debug\Latin_Square.lib" /MACHINE:X86 Debug\latin.obj
+         Debug\main.obj
+         Latin_Square.vcxproj -> E:\Github\The_recording_of_studying_data_struct(github)\Latin_Square\Debug\Latin_Square.exe
+     1>已完成生成项目“E:\Github\The_recording_of_studying_data_struct(github)\Latin_Square\Latin_Square\Latin_Square.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.34
